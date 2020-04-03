@@ -5,7 +5,6 @@ const users = require('./routes/users');
 const connDb = require('./config/dbConn');
 
 connDb();
-
 const app = express();
 
 app.use('/api/users', users);
