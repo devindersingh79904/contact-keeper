@@ -6,6 +6,7 @@ const connDb = require('./config/dbConn');
 
 connDb();
 const app = express();
+app.use(express.json({ extented: false }));
 
 app.use('/api/users', users);
 app.use('/api/auth', auth);
