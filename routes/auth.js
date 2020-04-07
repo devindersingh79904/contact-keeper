@@ -43,15 +43,13 @@ router.post(
       const user = await User.findOne({ email });
 
       if (!user) {
-        res.status(400).json({ msg: 'Invalid cradential ' });
-        return;
+        return res.status(400).json({ msg: 'Invalid cradential' });
       }
 
       const isMatch = await bcryptjs.compare(password, user.password);
 
       if (!isMatch) {
-        res.status(400).json({ msg: 'Invalid cradential ' });
-        return;
+        return res.status(400).json({ msg: 'Invalid cradential' });
       }
 
       const payload = {

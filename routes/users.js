@@ -31,7 +31,7 @@ router.post(
 
       if (user) {
         console.log(user);
-        res.status(400).json({ msg: 'User already exist ' });
+        res.status(400).json({ msg: 'User already exist' });
         return;
       }
 
